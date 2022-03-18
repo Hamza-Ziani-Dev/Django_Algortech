@@ -1,0 +1,305 @@
+{% extends 'base.html' %} 
+{% load static %}
+ {% load i18n %} 
+{% block title%}
+<title> Products</title> 
+{% endblock title %} 
+{% block body %}
+
+<section
+  class="header-title section-padding"
+  style="background-image: url({% static 'assets/images/header-bg.jpg' %})"
+>
+  <div class="container text-center">
+    <h2 class="title">Products</h2>
+  </div>
+</section>
+<!-- header-title -->
+
+<section class="startup-section section-padding">
+  <div class="container">
+    <div class="header">
+      <div class="row">
+        <div class="col-sm-3">
+          <h2>Our Products <br/>
+            <br />
+          </h2>
+        </div>
+
+        <div class="col-sm-9">
+          <p style="font-size: 18px">Algortech collaborates with world leaders in the field of
+            safety and security, and represents the best range on the market.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- header -->
+
+    <div class="section-wrapper">
+      <div class="row">
+        <div class="col-sm-3">
+          <div class="wrapper-content">
+            <div class="caption">
+              <img
+                src="{% static 'assets/images/product-sophos.png' %}"
+                alt="image"
+              />
+
+              <a
+                href="https://www.sophos.com/en-us.aspx"
+                target="_blank"
+                class="hover-view"
+                ><img src="{% static 'assets/images/link.png' %}" alt=""
+              /></a>
+
+              <div class="border">
+                <div class="border-one"></div>
+                <div class="border-two"></div>
+                <div class="border-three"></div>
+                <div class="border-four"></div>
+              </div>
+            </div>
+
+            <a href="https://www.sophos.com/en-us.aspx" target="_blank">
+              <h3>SOPHOS</h3>
+            </a>
+            <p>
+              Sophos is a program / appliance which secures every
+              endpoint of your network (Anti-virus, Anti-spam, Encryption...)
+              <br /><br />
+            </p>
+
+            <a href="https://www.sophos.com/en-us.aspx"
+              target="_blank"
+              class="link">More info<i class="fa fa-sort-asc" aria-hidden="true" ></i></a>
+          </div>
+        </div>
+
+        <div class="col-sm-3">
+          <div class="wrapper-content">
+            <div class="caption">
+              <img
+                src="{% static 'assets/images/product-barracuda.jpg' %}"
+                alt="image"
+              />
+
+              <a
+                href="https://www.barracuda.com/?L=fr"
+                target="_blank"
+                class="hover-view"
+                ><img src="{% static 'assets/images/link.png' %}" alt=""
+              /></a>
+
+              <div class="border">
+                <div class="border-one"></div>
+                <div class="border-two"></div>
+                <div class="border-three"></div>
+                <div class="border-four"></div>
+              </div>
+            </div>
+
+            <a href="https://www.barracuda.com/?L=fr" target="_blank">
+              <h3>BARRACUDA</h3>
+            </a>
+            <p>
+              Barracuda is an appliance (Firewall) which provides
+              E-mail protection, Network and application security and Data
+              protection.
+            </p>
+
+            <a href="https://www.barracuda.com/?L=fr"
+              target="_blank"
+              class="link">More info
+              <i class="fa fa-sort-asc" aria-hidden="true"></i></a>
+          </div>
+        </div>
+
+        <div class="col-sm-3">
+          <div class="wrapper-content last-wrapper">
+            <div class="caption">
+              <img
+                src="{% static 'assets/images/product-ibas.jpg' %}"
+                alt="image"
+              />
+
+              <a
+                href="https://www.ibas-uk.com/"
+                target="_blank"
+                class="hover-view"
+                ><img src="{% static 'assets/images/link.png' %}" alt=""
+              /></a>
+
+              <div class="border">
+                <div class="border-one"></div>
+                <div class="border-two"></div>
+                <div class="border-three"></div>
+                <div class="border-four"></div>
+              </div>
+            </div>
+
+            <a href="https://www.ibas-uk.com/" target="_blank">
+              <h3>IBAS</h3>
+            </a>
+            <p>
+              IBAS provides informed and impartial adjudications on
+              disputes that arise between licensed gambling operators and
+              customers" .
+            </p>
+
+            <a href="https://www.ibas-uk.com/" target="_blank" class="link"
+              >{% trans 'More info' %}
+              <i class="fa fa-sort-asc" aria-hidden="true"></i
+            ></a>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="wrapper-content last-wrapper">
+            <div class="caption">
+              <img
+                src="{% static 'assets/images/product-sparkview.png' %}"
+                alt="image"
+              />
+
+              <a
+                href="https://www.beyondssl.com/de/produkte/sparkview/"
+                target="_blank"
+                class="hover-view"
+                ><img src="{% static 'assets/images/link.png' %}" alt=""
+              /></a>
+
+              <div class="border">
+                <div class="border-one"></div>
+                <div class="border-two"></div>
+                <div class="border-three"></div>
+                <div class="border-four"></div>
+              </div>
+            </div>
+
+            <a href="https://www.beyondssl.com/de/produkte/sparkview/"
+              target="_blank">
+              <h3>Sparkview</h3>
+            </a>
+            <p>
+              Sparkview is a remote access solution that reduces
+              complexity and at the same time ensures that your employees can
+              work more effectively.
+            </p>
+
+            <a
+              href="https://www.beyondssl.com/de/produkte/sparkview/"
+              target="_blank"
+              class="link">More info
+              <i class="fa fa-sort-asc" aria-hidden="true"></i></a>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="wrapper-content last-wrapper">
+            <div class="caption">
+              <img
+                src="{% static 'assets/images/product-spamtitan.png' %}"
+                alt="image"
+              />
+
+              <a
+                href="https://www.spamtitan.com/"
+                target="_blank"
+                class="hover-view"
+                ><img src="{% static 'assets/images/link.png' %}" alt=""
+              /></a>
+
+              <div class="border">
+                <div class="border-one"></div>
+                <div class="border-two"></div>
+                <div class="border-three"></div>
+                <div class="border-four"></div>
+              </div>
+            </div>
+
+            <a href="https://www.spamtitan.com/" target="_blank">
+              <h3>SPAMTITAN</h3>
+            </a>
+            <p>
+              Spam titan is a program which provides advanced email
+              security for your business without making it complicated.
+            </p>
+
+            <a href="https://www.spamtitan.com/" target="_blank" class="link">More info<i
+                class="fa fa-sort-asc"
+                aria-hidden="true"></i></a>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="wrapper-content last-wrapper">
+            <div class="caption">
+              <img
+                src="{% static 'assets/images/product-paessler.png' %}"
+                alt="image"
+              />
+
+              <a
+                href="https://www.fr.paessler.com/"
+                target="_blank"
+                class="hover-view"
+                ><img src="{% static 'assets/images/link.png' %}" alt=""
+              /></a>
+
+              <div class="border">
+                <div class="border-one"></div>
+                <div class="border-two"></div>
+                <div class="border-three"></div>
+                <div class="border-four"></div>
+              </div>
+            </div>
+
+            <a href="https://www.fr.paessler.com/" target="_blank">
+              <h3>PRTG</h3>
+            </a>
+            <p>
+              PRTG is a computer monitoring software that oversees all
+              components of your Informatique infrastructure
+            </p>
+
+            <a href="https://www.fr.paessler.com/" target="_blank" class="link">More info
+              <i class="fa fa-sort-asc" aria-hidden="true"></i></a>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="wrapper-content last-wrapper">
+            <div class="caption">
+              <img
+                src="{% static 'assets/images/product-papercut.jpg' %}"
+                alt="image"
+              />
+              <a
+                href="https://www.papercut.com/"
+                target="_blank"
+                class="hover-view"
+                ><img src="{% static 'assets/images/link.png' %}" alt=""
+              /></a>
+              <div class="border">
+                <div class="border-one"></div>
+                <div class="border-two"></div>
+                <div class="border-three"></div>
+                <div class="border-four"></div>
+              </div>
+            </div>
+            <a href="https://www.papercut.com/" target="_blank">
+              <h3>PaperCut</h3>
+            </a>
+            <p>
+              Papercut is a print and copy controller that helps in
+              managing users and printers<br /><br />
+            </p>
+            <a href="https://www.papercut.com/" target="_blank" class="link"
+              >{% trans 'More info' %}
+              <i class="fa fa-sort-asc" aria-hidden="true"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- section-wrapper -->
+  </div>
+</section>
+
+{% endblock body %}

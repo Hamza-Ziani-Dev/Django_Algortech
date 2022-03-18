@@ -1,0 +1,175 @@
+{% extends 'base.html' %}
+{% load static  %}
+{% load i18n %}
+{% block title %}<title> Services </title>{% endblock title %}
+ 
+{% block body %}
+
+    <section class="header-title section-padding" style="background-image: url({% static 'assets/images/header-bg.jpg' %})">
+        <div class="container text-center">
+            <h2 class="title">Services</h2>
+        </div>
+    </section>
+    <!-- header-title -->
+
+    <section class="about-office-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="content">
+                        <div class="header">
+                            <h2 style="color: blue">{% trans "Our value added services" %}</h2>
+                            <div class="border-2"></div>
+                        </div>
+
+                        <p style="color: black">
+                            {% trans "In-depth studies of the company activity " %}
+                            {% trans "(partial or total)" %} 
+                            {% trans "that lead to the choice of algorithms or complete and advanced solutions," %}
+                            {% trans "that take into account imperatively 3 different interfacing parts:" %}
+                            {% trans " system (IT, logistics, equipment ...,)" %}
+                            {% trans "organization and human resources." %} 
+                            {% trans "These algorithms (known or new) " %} 
+                            {% trans "are applied or implemented in an appropriate manner" %} 
+                            {% trans "according to the nature of the identified problems " %}
+                            {% trans "(whose level of abstraction is necessarily variable)." %}
+                            {% trans "  Through this methodology where IT," %}
+                            {% trans "logistics and mathematics are merged," %}
+                            {% trans "not only is every movement mastered but perfectly " %}
+                            {% trans " transformed into progress for the company" %}
+                            </p>
+
+
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="caption text-center wow slideInRight">
+                        <img src="{% static 'assets/images/pic2.PNG' %}" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- about-office-section -->
+
+    <section class="finance-service-section section-padding">
+        <div class="container text-center">
+            <div class="section-title">
+                <h2>{% trans "ACTIVITY STUDIES" %}</h2>
+                <div class="border-2"></div>
+            </div>
+            <!-- section-title -->
+
+            <div class="finance-carousel owl-carousel owl-theme">
+                <div class="finance-wrapper item">
+                    <div class="icon">
+
+                    </div>
+
+                    <div class="wrapper-content">
+                        <h4><a>{% trans "Logistics" %}</a></h4>
+                        <p><br></p>
+                    </div>
+
+                    <div class="hover">
+                        <span class="hover-one"></span>
+                        <span class="hover-two"></span>
+                        <span class="hover-three"></span>
+                        <span class="hover-four"></span>
+                    </div>
+                </div>
+
+                <div class="finance-wrapper item">
+                    <div class="icon"></div>
+
+                    <div class="wrapper-content">
+                        <h4><a>Optimisation</a></h4>
+                        <p><br></p>
+                    </div>
+
+                    <div class="hover">
+                        <span class="hover-one"></span>
+                        <span class="hover-two"></span>
+                        <span class="hover-three"></span>
+                        <span class="hover-four"></span>
+                    </div>
+                </div>
+
+                <div class="finance-wrapper item">
+                    <div class="icon"></div>
+
+                    <div class="wrapper-content">
+                        <h4><a>{% trans "Engineering" %}</a></h4>
+                        <p><br></p>
+                    </div>
+
+                    <div class="hover">
+                        <span class="hover-one"></span>
+                        <span class="hover-two"></span>
+                        <span class="hover-three"></span>
+                        <span class="hover-four"></span>
+                    </div>
+                </div>
+
+                <div class="finance-wrapper item">
+                    <div class="icon"></div>
+
+                    <div class="wrapper-content">
+                        <h4><a>{% trans "Complexity" %}</a></h4>
+                        <p><br></p>
+                    </div>
+
+                    <div class="hover">
+                        <span class="hover-one"></span>
+                        <span class="hover-two"></span>
+                        <span class="hover-three"></span>
+                        <span class="hover-four"></span>
+                    </div>
+                </div>
+
+                <div class="finance-wrapper item">
+                    <div class="icon"></div>
+
+                    <div class="wrapper-content">
+                        <h4><a>{% trans "Opportunity" %}</a></h4>
+                        <p><br></p>
+                    </div>
+
+                    <div class="hover">
+                        <span class="hover-one"></span>
+                        <span class="hover-two"></span>
+                        <span class="hover-three"></span>
+                        <span class="hover-four"></span>
+                    </div>
+                </div>
+                <div class="finance-wrapper item">
+                    <div class="icon"></div>
+
+                    <div class="wrapper-content">
+                        <h4><a>{% trans "Feasibility" %}</a></h4>
+                        <p><br></p>
+                    </div>
+
+                    <div class="hover">
+                        <span class="hover-one"></span>
+                        <span class="hover-two"></span>
+                        <span class="hover-three"></span>
+                        <span class="hover-four"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- finance-service-section -->
+
+    {% endblock body %}
+
+
+
+
+
+
+
+
+

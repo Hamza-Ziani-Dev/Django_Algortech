@@ -1,0 +1,133 @@
+{% extends 'base.html' %}
+{% load static  %}
+{% load i18n %}
+{% block title %}<title>Developpement</title>{% endblock title %}
+ 
+
+{% block body %}
+
+    <section class="header-title section-padding" style="background-image: url({% static 'assets/images/header-bg.jpg' %})">
+        <div class="container text-center">
+            <h2 class="title">{% trans "Multimedia developpement" %}</h2>
+        </div>
+    </section>
+    <!-- header-title -->
+    <section class="service-page-section section-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="side-bar">
+                        <ul class="page-list text-left">
+                            <li> <a href="{% url 'home:home' %}"> {% trans "Home" %}<i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+                            <li><a href="{% url 'services:services' %}"> Services <i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+                            <li><a href="{% url 'products:products' %}">{% trans "Products" %} <i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+                            <li class="active"><a href="{% url 'developpement:developpement' %}">Developpement <i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+                            <li><a href="{% url 'contact:contact' %}">Contact <i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+                        </ul>
+
+                        <ul class="location">
+                            <li class="heading">Contact</li>
+
+                            <li>
+                                <i class="fa fa-road" aria-hidden="true"></i>
+
+                                <div class="text"> 115 Angle Abderrahim <br>{% trans "and Bir Hakim, Oasis Office" %} <br>{% trans "Center 3rd floor" %}<br>{% trans "Oasis, Casablanca, Morocco" %}</div>
+                            </li>
+
+                            <li>
+                                <i class="fa fa-volume-control-phone" aria-hidden="true"></i>
+
+                                <div class="text">+212 522 52 08 53</div>
+                            </li>
+
+                            <li>
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+
+                                <div class="text">info@algortech.com</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!--  <div class="col-md-8">
+                        <div class="single-service-wrapper">
+                            
+
+                            <p style="color: black">Algortech develop specific software according to our customers needs :</p>
+
+                            <ul class="service-list">
+                                <li style="color: black"><i class="fa fa-adjust" aria-hidden="true"></i> Applications / Multimedia software</li>
+                                <li style="color: black"><i class="fa fa-adjust" aria-hidden="true"></i> Applications / Mobile software</li>
+                                <li style="color: black"><i class="fa fa-adjust" aria-hidden="true"></i> Potals / Web sites</li>
+                            </ul>
+                            <p style="color: black">We also provide interesting packages for hosting, massaging and domain names.</p>
+                        
+                            
+
+
+                        </div>
+                    </div>-->
+                <div class="col-md-8">
+                    <div class="working-section">
+                        <div class="header">
+                            <div class="row">
+
+                                <div class="col-sm-12" style="color: black">
+                                   {% trans "Algortech develops specific software according to our customers needs :" %}
+
+                                    <ul class="service-list">
+                                        <li style="color: black"><i class="fa fa-adjust" aria-hidden="true"></i>{% trans "Algortech Applications / Multimedia software" %}</li>
+                                        <li style="color: black"><i class="fa fa-adjust" aria-hidden="true"></i>{% trans "Applications / Mobile software" %}</li>
+                                        <li style="color: black"><i class="fa fa-adjust" aria-hidden="true"></i>{% trans "Portals / Web sites" %}</li>
+                                    </ul>
+                                    {% trans "We also provide interesting packages for hosting, messaging and domain names." %}
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="section-wrapper" style="text-align: center">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <div class="wrapper-content">
+                                        <img src="{% static 'assets/images/img-06072018-EM-1.jpg' %}" alt="image">
+                                        <h3>{% trans "Web Applications" %}</h3>
+
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <div class="wrapper-content">
+                                        <img src="{% static 'assets/images/Fotolia_72178291_L.jpg' %}" alt="image">
+                                        <h3>{% trans "Portals / Web sites" %}</h3>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <div class="wrapper-content">
+                                        <img src="{% static 'assets/images/Mobile-apps.jpg' %}" alt="image">
+                                        <h3>{% trans "Mobile applications" %}</h3>
+                                    </div>
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <div class="wrapper-content">
+                                        <img src="{% static 'assets/images/serveur-informatique.jpg' %}" alt="image">
+                                        <h3>{% trans "Packages" %}</h3>
+                                        <p>{% trans "Domain names, Hosting, messaging, maintenance..." %}</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <!-- working-section -->
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- service-page-section -->
+
+{% endblock body %}
+
+   

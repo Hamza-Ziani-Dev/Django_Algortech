@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+{% load static %} 
+{% load i18n %}
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {% block title %}
+    <title> </title>
+    {% endblock title %}
+    <!-- fav icon -->
+    <link
+      href="{% static 'assets/images/as.bmp' %}"
+      rel="shortcut icon"
+      type="image/png"
+    />
+
+    <!-- Bootstrap -->
+    <link
+      href="{% static 'assets/bootstrap/css/bootstrap.min.css' %}"
+      rel="stylesheet"
+    />
+
+    <!-- animated-css -->
+    <link
+      href="{% static 'assets/css/animate.min.css' %}"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <!-- font-awesome-css -->
+    <link
+      href="{% static 'assets/css/font-awesome.min.css' %}"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <!--boxicons-->
+    <link
+      href="{% static 'vendor/boxicons/css/boxicons.min.css' %}"
+      rel="stylesheet"
+    />
+
+    <!-- owl-carrosel-css -->
+    <link
+      href="{% static 'assets/owl-carrosel/owl.carousel.min.css' %}"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="{% static 'assets/owl-carrosel/owl.theme.default.min.css' %}"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- Revolution Slider -->
+
+    <link
+      rel="stylesheet"
+      href="{% static 'assets/css/revolution/layers.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'assets/css/revolution/navigation.css' %}"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'assets/css/revolution/settings.css' %}"
+    />
+    <!-- offcanvas-menu-css -->
+
+    <link
+      href="{% static 'assets/css/offcanvas-menu.css' %}"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- style-css -->
+    <link
+      href="{% static 'assets/css/style.css' %}"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <!--fontawesome-->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+      integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
+      crossorigin="anonymous"
+    />
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=UA-142033714-1"
+    ></script>
+
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "UA-142033714-1");
+    </script>
+  </head>
+  <body class="homePageFour">
+    <!-- start preloader -->
+    <div id="preloader">
+      <div class="preloader">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+    <!-- end preloader -->
+    <header class="header-section">
+      <div class="topper">
+        <div class="top-bar">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-4">
+                <div class="navbar-header">
+                  <a class="navbar-brand" href="{% url 'home:home' %}"
+                    ><img
+                      src="{% static 'assets/images/logo1.png' %}"
+                      alt="image"
+                  /></a>
+                </div>
+              </div>
+
+              <div class="col-md-8">
+                <div class="header-left-bar pull-right">
+                  <ul class="contact-wrapper">
+                    <li>
+                      <a href="tel:+212 522 52 08 53"
+                        ><i class="fa fa-mobile" aria-hidden="true"></i> +212
+                        522 52 08 53</a
+                      >
+                    </li>
+                    <li>
+                      <a href="mailto:info@algortech.com"
+                        ><i class="fa fa-envelope" aria-hidden="true"></i>
+                        info@algortech.com</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <!-- header-left-bar -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- top-bar -->
+      </div>
+      <!-- topper -->
+
+      <div class="fluid-container">
+        <nav class="navbar navbar-inverse hidden-sm hidden-xs">
+          <div class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="{% url 'home:home' %}">{% trans 'Home'%}</a></li>
+              <li><a href="{% url 'services:services' %}">{% trans 'Services'%}</a></li>
+              <li><a href="{% url 'products:products' %}">{% trans 'Products' %}</a></li>
+              <li><a href="{% url 'developpement:developpement' %}">{% trans 'Developpement' %}</a></li>
+              <li><a href="{% url 'contact:contact' %}">{% trans 'Contact' %}</a></li>
+              </ul>
+              <ul class='nav navbar-nav social-icon pull-right'>
+              <li>
+                <form action="{% url 'set_language' %}" method="post">
+                  {% csrf_token %}
+                    {% get_current_language as LANGUAGE_CODE %}                                         
+                    <input name="next" type="hidden" value="{{ request.get_full_path|slice:'3:' }}">
+                    {% if LANGUAGE_CODE == 'fr' %}
+                        <button class=" fa fa-language btn btn-secondary"style="border-radius: 10px;  margin:20px"type='submit' name='language' value='en' >
+                            <span class='label'></span>English
+                        </button>
+                    {% else %}
+                        <button class=" fa fa-language btn btn-secondary" style="border-radius: 10px;  margin:20px" type='submit' name='language' value='fr' >
+                            <span class='label'></span>Franch
+                        </button>
+                    {% endif %}
+                </form>
+              </li> 
+              </ul>
+    
+           {% comment %} <ul class="nav navbar-nav social-icon pull-right">
+              <li class="active dropdown"><a href="index.html">
+                  <i class="fa fa-language" aria-hidden="true"></i> ENG
+                  <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                <ul class="dropdown-menu">
+                  <li class="active">
+                    <a href="Accueil.html"> FR </a></li>
+                </ul>
+              </li>
+            </ul>  {% endcomment %}
+           
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- header-section -->
+    {% block body %} 
+    {% endblock body %}
+
+    <footer class="footer-section">
+      <div class="footer-container">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-3 col-sm-4">
+              <div class="footer-wrapper">
+                <!--  <img src="assets/images/footer-logo.png" alt="">-->
+                <h3>{% trans "Adress" %}</h3>
+                <ul class="location">
+                  <li>
+                    <i class="fa fa-home" aria-hidden="true"></i>
+                    <div class="content">
+                      {% trans '115 Angle Abderrahim'%}
+                       <br />
+                       {% trans 'and Bir Hakim, Oasis Office'%} <br />
+                       {% trans 'Center 3rd floor' %} <br />
+                       {% trans 'Oasis, Casablanca, Morocco' %} <br />
+                    </div>
+
+                  </li>
+
+                  <li>
+                    <i class="fa fa-phone" aria-hidden="true"></i>
+                    <div class="content">+212 522 52 08 53</div>
+                  </li>
+
+                  <li>
+                    <i class="fa fa-envelope" aria-hidden="true"></i>
+                    <div class="content">info@algortech.com</div>
+                  </li>
+                </ul>
+              </div>
+              <!-- footer-wrapper -->
+            </div>
+
+            <div class="col-md-4 col-md-offset-1 col-sm-4">
+              <div class="footer-wrapper last-wrapper">
+                <h3>{% trans 'Our products' %}</h3>
+
+                <ul class="wrapper-option clearfix">
+                  <li>
+                    <a style="color: white">{% trans 'Sophos' %} :</a
+                    ><a href="mailto:Sophos@algortech.com">
+                      Sophos@algortech.com</a
+                    >
+                  </li>
+                  <li>
+                    <a style="color: white">{% trans 'Studies' %} :</a
+                    ><a href="mailto:Studies@algortech.com">
+                      Studies@algortech.com</a
+                    >
+                  </li>
+                  <li>
+                    <a style="color: white">{% trans 'Sparkview' %} :</a
+                    ><a href="mailto:Sparkview@algortech.com">
+                      Sparkview@algortech.com</a
+                    >
+                  </li>
+                  <li>
+                    <a style="color: white">{% trans 'Barracuda' %} :</a
+                    ><a href="mailto:Barracuda@algortech.com">
+                      Barracuda@algortech.com</a
+                    >
+                  </li>
+                  <li>
+                    <a style="color: white">{% trans 'PRTG' %} :</a
+                    ><a href="mailto:Prtg@algortech.com"> Prtg@algortech.com</a>
+                  </li>
+                </ul>
+                <!-- wrapper-option -->
+              </div>
+              <!-- footer-wrapper -->
+            </div>
+
+            <div class="col-md-4 col-sm-4">
+              <div class="footer-wrapper">
+                <h3 style="text-align: center">{% trans 'Access map' %}</h3>
+                <div class="map">
+                  <a href="#slidingDiv" class="show_hide" rel="#slidingDiv"></a>
+                  <div id="slidingDiv">
+                    <div class="map_area">
+                      <div
+                        id="googleMap"
+                        style="width: 100%; height: 200px"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- footer-wrapper -->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- footer-container -->
+
+      <div class="copy-right text-center">
+        <div class="container">
+          <a href="#">
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            {% trans 'Copyright' %} &copy;
+            <script>
+              document.write(new Date().getFullYear());
+            </script>
+            © {% trans 'All Rights Reserved' %}
+            <i class="fa fa-heart-o" aria-hidden="true"></i> {% trans 'by' %}
+            <a href="https://algortech.com" target="_blank">ALGORTECH</a>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+          </a>
+        </div>
+      </div>
+      <!-- copy-right -->
+    </footer>
+    <!-- footer-section -->
+
+    <!-- Off-Canvas View Only -->
+    <span class="menu-toggle navbar visible-xs visible-sm"
+      ><i class="fa fa-bars" aria-hidden="true"></i
+    ></span>
+
+    <div id="offcanvas-menu" class="visible-xs visible-sm">
+      <span class="close-menu"
+        ><i class="fa fa-times" aria-hidden="true"></i
+      ></span>
+
+      <ul class="menu-wrapper">
+          <li class="active"><a href="{% url 'home:home' %}">{% trans 'Home'%}</a></li>
+          <li><a href="{% url 'services:services' %}">{% trans 'Services'%}</a></li>
+          <li><a href="{% url 'products:products' %}">{% trans 'Products' %}</a></li>
+          <li><a href="{% url 'developpement:developpement' %}">{% trans 'Developpement' %}</a></li>
+          <li><a href="{% url 'contact:contact' %}">{% trans 'Contact' %}</a></li>
+          <li>
+            <li>
+              <form action="{% url 'set_language' %}" method="post">
+                {% csrf_token %}
+                  {% get_current_language as LANGUAGE_CODE %}                                         
+                  <input name="next" type="hidden" value="{{ request.get_full_path|slice:'3:' }}">
+                  {% if LANGUAGE_CODE == 'fr' %}
+                      <button class=" fa fa-language btn btn-secondary"style="border-radius: 10px;  margin:20px"type='submit' name='language' value='en'>
+                          <span class='label'></span>English
+                      </button>
+                  {% else %}
+                      <button class=" fa fa-language btn btn-secondary" style="border-radius: 10px;  margin:20px" type='submit' name='language' value='fr'>
+                          <span class='label'></span>Franch
+                      </button>
+                  {% endif %}
+              </form>
+            </li> 
+        </ul>
+      <!-- menu-wrapper -->
+    </div>
+    <!-- Off-Canvas View Only -->
+
+    <div id="toTop" class="hidden-xs">
+      <i class="fa fa-chevron-up"></i>
+    </div>
+    <!-- totop -->
+
+    <script src="{% static 'assets/js/jquery.js' %}"></script>
+    <script src="{% static 'assets/bootstrap/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'assets/js/jquery.inview.min.js' %}"></script>
+    <script src="{% static 'assets/js/wow.js' %}"></script>
+    <script src="{% static 'assets/js/lightbox.js' %}"></script>
+    <script src="{% static 'assets/js/portfolio.js' %}"></script>
+    <script src="{% static 'assets/owl-carrosel/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'assets/js/jquery-ui.js' %}"></script>
+    <script src="{% static 'assets/js/language.js' %}"></script>
+    <script src="{% static 'assets/js/gmaps.min.js' %}"></script>
+    <script src="{% static 'assets/js/hs.g-map.js' %}"></script>
+
+    <!-- Revolution Slider -->
+    <script src="{% static 'assets/revolution/jquery.themepunch.revolution.min.js' %}"></script>
+    <script src="{% static 'assets/revolution/jquery.themepunch.tools.min.js' %}"></script>
+
+    <!-- Revolution Extensions -->
+    <script
+      type="text/javascript"
+      src="{% static 'assets/revolution/extensions/revolution.extension.actions.min.js' %}"
+    ></script>
+    <script
+      type="text/javascript"
+      src="{% static 'assets/revolution/extensions/revolution.extension.carousel.min.js' %}"
+    ></script>
+    <script
+      type="text/javascript"
+      src="{% static 'assets/revolution/extensions/revolution.extension.kenburn.min.js' %}"
+    ></script>
+    <script
+      type="text/javascript"
+      src="{% static 'assets/revolution/extensions/revolution.extension.layeranimation.min.js' %}"
+    ></script>
+    <script
+      type="text/javascript"
+      src="{%  static 'assets/revolution/extensions/revolution.extension.migration.min.js' %}"
+    ></script>
+    <script
+      type="text/javascript"
+      src="{% static 'assets/revolution/extensions/revolution.extension.navigation.min.js' %}"
+    ></script>
+    <script
+      type="text/javascript"
+      src="{% static 'assets/revolution/extensions/revolution.extension.parallax.min.js' %}"
+    ></script>
+    <script
+      type="text/javascript"
+      src="{% static 'assets/revolution/extensions/revolution.extension.slideanims.min.js' %}"
+    ></script>
+    <script
+      type="text/javascript"
+      src="{% static 'assets/revolution/extensions/revolution.extension.video.min.js' %}"
+    ></script>
+
+    <script src="{% static 'assets/js/script.js' %}"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCu887Wvkpr_ROgF4mZxBQR3x3x8TNh6kA&callback=initMap"></script>
+    <script>
+      /**
+       * Disable right-click of mouse, F12 key, and save key combinations on page
+       * By Arthur Gareginyan (arthurgareginyan@gmail.com)
+       * For full source code, visit http://www.mycyberuniverse.com
+       */
+      window.onload = function () {
+        document.addEventListener(
+          "contextmenu",
+          function (e) {
+            e.preventDefault();
+          },
+          false
+        );
+        document.addEventListener(
+          "keydown",
+          function (e) {
+            //document.onkeydown = function(e) {
+            // "I" key
+            if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
+              disabledEvent(e);
+            }
+            // "J" key
+            if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
+              disabledEvent(e);
+            }
+            // "S" key + macOS
+            if (
+              e.keyCode == 83 &&
+              (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)
+            ) {
+              disabledEvent(e);
+            }
+            // "U" key
+            if (e.ctrlKey && e.keyCode == 85) {
+              disabledEvent(e);
+            }
+            // "F12" key
+            if (event.keyCode == 123) {
+              disabledEvent(e);
+            }
+          },
+          false
+        );
+
+        function disabledEvent(e) {
+          if (e.stopPropagation) {
+            e.stopPropagation();
+          } else if (window.event) {
+            window.event.cancelBubble = true;
+          }
+          e.preventDefault();
+          return false;
+        }
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,268 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block title %}<title> {% trans 'Home' %} </title>{% endblock title %}
+
+{% block body %}
+
+    <section class="slider-section">
+        <h2 class="hidden">title</h2>
+
+        <div class="rev_slider_wrapper">
+            <div id="rev_slider_4" class="rev_slider" style="display:none">
+                <ul>
+                    <li data-transition="random" data-title="Slide Title" data-param1="Additional Text" data-thumb="{% static 'assets/images/slider-2.jpg' %}">
+                        <!-- SLIDE'S MAIN BACKGROUND IMAGE -->
+                        <img src="{% static 'assets/images/slider-5.jpg' %}" alt="Sky" class="rev-slidebg">
+
+                        <!-- LAYER NR. 2 -->
+                        <div class="tp-caption sfr font-extra-bold tp-resizeme letter-space-4" data-x="left" data-hoffset="0" data-y="top" data-voffset="300" data-frames='[{"delay":0,"speed":3000,"frame":"0","from":"x:[175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:1;","mask":"x:[-100%];y:0;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'><span style="font-size: 48px">{% trans 'We transform your company' %}</span>
+                        </div>
+
+                        <!-- LAYER NR. 2 -->
+                        <div class="tp-caption sfr font-extra-bold tp-resizeme letter-space-4" data-x="left" data-hoffset="0" data-y="top" data-voffset="360" data-frames='[{"delay":1000,"speed":3000,"frame":"0","from":"x:[175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:1;","mask":"x:[-100%];y:0;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'><span style="font-size: 48px">{% trans 'movements into progress' %}</span>
+                        </div>
+
+                        <!-- LAYER NR. 3 -->
+                        <div class="tp-caption font-medium sfb tp-resizeme letter-space-5" data-x="left" data-hoffset="0" data-y="center" data-voffset="90" data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:bottom;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'><a href="pages/services.html" class="el-btn-regular slider-btn-left btn btn-primary">{% trans 'Our services' %}</a> <a href="{% url 'services:services' %}" class="el-btn-regular btn btn-primary color-bg">{% trans 'Our products' %}</a>
+                        </div>
+                    </li>
+
+                    <li data-transition="random" data-title="Slide Title" data-param1="Additional Text" data-thumb="assets/images/slider/slider-5.jpg">
+                        <!-- SLIDE'S MAIN BACKGROUND IMAGE -->
+                        <img src="{% static 'assets/images/slider-2.jpg' %}" alt="Sky" class="rev-slidebg">
+                        <!-- LAYER NR. 2 -->
+                        <div class="tp-caption sfr font-extra-bold tp-resizeme letter-space-4" data-x="left" data-hoffset="0" data-y="top" data-voffset="300" data-frames='[{"delay":0,"speed":3000,"frame":"0","from":"x:[175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:1;","mask":"x:[-100%];y:0;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'><span style="font-size: 48px">{% trans 'Our skills and services replies' %}</span>
+                        </div>
+
+                        <!-- LAYER NR. 2 -->
+                        <div class="tp-caption sfr font-extra-bold tp-resizeme letter-space-4" data-x="left" data-hoffset="0" data-y="top" data-voffset="360" data-frames='[{"delay":1000,"speed":3000,"frame":"0","from":"x:[175%];y:0px;z:0;rX:0;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:1;","mask":"x:[-100%];y:0;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'><span style="font-size: 48px">{% trans 'to your requirements' %}</span>
+                        </div>
+
+                        <!-- LAYER NR. 3 -->
+                        <div class="tp-caption font-medium sfb tp-resizeme letter-space-5" data-x="left" data-hoffset="0" data-y="center" data-voffset="90" data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:bottom;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'><a href="{% url 'services:services'%}" class="el-btn-regular slider-btn-left btn btn-primary">{% trans 'Our services' %}</a> <a href="{% url 'products:products' %}" class="el-btn-regular slider-btn-left btn btn-primary">{% trans 'Our services' %}</a> <a href=color-bg">{% trans 'Our products' %}</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- start service-section -->
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services">
+        <div class="fluid-container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Services</h2>
+            </div>
+            <div class="row mt-3">
+                <div class="col-md-4 col-lg-4 d-flex align-items-stretch ">
+                    <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+                        <div class="icon"><i class="bx bxl-dribbble"></i></div>
+
+                        <h4 class="title"><a href="/services" >{% trans 'Logistics' %}</a></h4>
+                        <p class="description">description</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-lg-4 d-flex align-items-stretch">
+                    <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
+                        <div class="icon"><i class='bx bxl-soundcloud'></i></div>
+                        <h4 class="title"><a href="services">{% trans 'Optimisation' %}</a></h4>
+                        <p class="description">description</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-lg-4 d-flex align-items-stretch">
+                    <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
+                        <div class="icon"><i class='bx bxl-audible'></i></div>
+
+                        <h4 class="title"><a href="services">{% trans 'Engineering' %}</a></h4>
+                        <p class="description">description</p>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row mt-3">
+                <div class="col-md-4 col-lg-4 d-flex align-items-stretch">
+                    <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
+                        <div class="icon"><i class='bx bx-infinite'></i></div>
+
+                        <h4 class="title"><a href="services">{% trans 'Feasibility' %}</a></h4>
+                        <p class="description">description</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-lg-4 d-flex align-items-stretch">
+                    <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
+                        <div class="icon"><i class='bx bx-loader-circle'></i></div>
+                        <h4 class="title">
+                            <a href="services">{% trans 'Complexity' %}</a>
+                        </h4>
+                        <p class="description">description</p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-lg-4 d-flex align-items-stretch">
+                    <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
+                        <div class="icon"><i class='bx bx-bulb'></i></div>
+                        <h4 class="title"><a href="services">{% trans "Opportunity" %}</a></h4>
+                        <p class="description">description</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <!-- End Services Section -->
+    <!-- end service-section -->
+
+
+    <section class="project-section section-padding">
+        <div class="container text-center">
+            <div class="section-title">
+                <h2>{% trans "TECHNOLOGY PARTNERS" %}</h2>
+
+            </div>
+            <!-- section-title -->
+
+            <div class="portfolio gallery-grid">
+
+
+                <div class="row">
+                    <div class="gallery-wrapper">
+                        <ul class="portfolio-items list-unstyled" id="grid">
+                            <li class="col-sm-3" data-groups='["simpsons"]'>
+                                <div class="project-wrapper">
+                                    <a href="https://www.barracuda.com/?L=fr" target="_blank"><img src="{% static 'assets/images/barracuda-networks-launches-first-next-generation-firewall-built-for-everyone-image-p-134.jpg' %}" alt=""></a>
+
+                                    <div class="hover-view">
+                                        <a href="https://www.barracuda.com/?L=fr" target="_blank" class="pull-right"><i class="fa fa-link" aria-hidden="true"></i></a>
+
+                                        <a href="https://www.barracuda.com/?L=fr" target="_blank">
+                                            <h4>{% trans 'Barracuda' %}</h4>
+                                        </a>
+                                        <a href="https://www.barracuda.com/?L=fr" target="_blank">
+                                            <p>{% trans 'Firewall' %}</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="col-sm-3" data-groups='["people"]'>
+                                <div class="project-wrapper">
+                                    <a href="https://www.sophos.com/en-us.aspx" target="_blank"><img src="{% static 'assets/images/sophos-anti-exploit1-1.png' %}" alt=""></a>
+
+                                    <div class="hover-view">
+                                        <a href="https://www.sophos.com/en-us.aspx" target="_blank" class="pull-right"><i class="fa fa-link" aria-hidden="true"></i></a>
+
+                                        <a href="https://www.sophos.com/en-us.aspx" target="_blank">
+                                            <h4>{% trans "Sophos" %}</h4>
+                                        </a>
+                                        <a href="https://www.sophos.com/en-us.aspx" target="_blank">
+                                            <p>{% trans 'Appliance' %}</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="col-sm-3" data-groups='["futurama"]'>
+                                <div class="project-wrapper">
+                                    <a href="https://www.ibas-uk.com/" target="_blank"><img src="{% static 'assets/images/ibas.jpg' %}" alt=""></a>
+
+                                    <div class="hover-view">
+                                        <a href="https://www.ibas-uk.com/" target="_blank" class="pull-right"><i class="fa fa-link" aria-hidden="true"></i></a>
+
+                                        <a href="https://www.ibas-uk.com/" target="_blank">
+                                            <h4>{% trans 'Ibas' %}</h4>
+                                        </a>
+                                        <a href="https://www.ibas-uk.com/" target="_blank">
+                                            <p>{% trans 'Informer' %}</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="col-sm-3" data-groups='["futurama"]'>
+                                <div class="project-wrapper">
+                                    <a href="https://www.beyondssl.com/de/produkte/sparkview/" target="_blank"><img src="{% static 'assets/images/sparkview-logo-blau.png' %}" alt=""></a>
+
+                                    <div class="hover-view">
+                                        <a href="https://www.beyondssl.com/de/produkte/sparkview/" target="_blank" class="pull-right"><i class="fa fa-link" aria-hidden="true"></i></a>
+
+                                        <a href="https://www.beyondssl.com/de/produkte/sparkview/" target="_blank">
+                                            <h4>{% trans "Sparkview" %}</h4>
+                                        </a>
+                                        <a href="https://www.beyondssl.com/de/produkte/sparkview/" target="_blank">
+                                            <p>{% trans "Remote access" %}</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="col-sm-3" data-groups='["simpsons"]'>
+                                <div class="project-wrapper">
+                                    <a href="https://www.spamtitan.com/" target="_blank"><img src="{% static 'assets/images/images.png' %}" alt=""></a>
+
+                                    <div class="hover-view">
+                                        <a href="https://www.spamtitan.com/" target="_blank" class="pull-right"><i class="fa fa-link" aria-hidden="true"></i></a>
+
+                                        <a href="https://www.spamtitan.com/" target="_blank">
+                                            <h4>{% trans "Spam titan" %}</h4>
+                                        </a>
+                                        <a href="https://www.spamtitan.com/" target="_blank">
+                                            <p>{% trans "Security" %}</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="col-sm-3" data-groups='["people" , "photography"]'>
+                                <div class="project-wrapper">
+                                    <a href="https://www.fr.paessler.com/" target="_blank"><img src="{% static 'assets/images/images%20(1).png' %}" alt=""></a>
+
+                                    <div class="hover-view">
+                                        <a href="https://www.fr.paessler.com/" target="_blank" class="pull-right"><i class="fa fa-link" aria-hidden="true"></i></a>
+
+                                        <a href="https://www.fr.paessler.com/" target="_blank">
+                                            <h4>{% trans "Paessler" %}</h4>
+                                        </a>
+                                        <a href="https://www.fr.paessler.com/" target="_blank">
+                                            <p>{% trans "Network monitor" %}</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="col-sm-3" data-groups='["people" , "photography"]'>
+                                <div class="project-wrapper">
+                                    <a href="https://www.papercut.com/" target="_blank"><img src="{% static 'assets/images/logo-papercut.jpg' %}" alt=""></a>
+
+                                    <div class="hover-view">
+                                        <a href="https://www.papercut.com/" target="_blank" class="pull-right"><i class="fa fa-link" aria-hidden="true"></i></a>
+
+                                        <a href="https://www.papercut.com/" target="_blank">
+                                            <h4>{% trans "PaperCut" %}</h4>
+                                        </a>
+                                        <a href="https://www.papercut.com/" target="_blank">
+                                            <p>{% trans "Print and copy control" %}</p>
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- project-section -->
+
+    <section class="secure-section">
+        <div class="container">
+            <h2>{% trans "We make your business secure & reliable" %}</h2>
+            <a href="mailto:info@algortech.com" class="btn btn-primary pull-right">{% trans "Get in touch!" %}</a>
+        </div>
+    </section>
+    <!-- secure-section -->
+
+
+{% endblock body %}
